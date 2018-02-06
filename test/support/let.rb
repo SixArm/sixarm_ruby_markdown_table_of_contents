@@ -12,29 +12,11 @@ module Let
     * [](#)
 
     ## Alpha
-
-    Lorem ipsum
-
     ### Bravo
-
-    Lorem ipsum
-
     #### Charlie
-
-    Lorem ipsum
-
     ## Delta
-
-    Lorem ipsum
-
     ### Echo
-
-    Lorem ipsum
-
     #### Foxtrot
-
-    Lorem ipsum
-
     XXX
   }
 
@@ -55,34 +37,16 @@ module Let
     <<~XXX
 
     ## Alpha
-
-    Lorem ipsum
-
     ### Bravo
-
-    Lorem ipsum
-
     #### Charlie
-
-    Lorem ipsum
-
     ## Delta
-
-    Lorem ipsum
-
     ### Echo
-
-    Lorem ipsum
-
     #### Foxtrot
-
-    Lorem ipsum
-
     XXX
   }
 
 
-  let(:markdown_output_as_string){
+  let(:markdown_default_output_as_string){
     <<~XXX
     # Example
 
@@ -94,33 +58,33 @@ module Let
         * [Foxtrot](#foxtrot)
 
     ## Alpha
-
-    Lorem ipsum
-
     ### Bravo
-
-    Lorem ipsum
-
     #### Charlie
-
-    Lorem ipsum
-
     ## Delta
-
-    Lorem ipsum
-
     ### Echo
-
-    Lorem ipsum
-
     #### Foxtrot
-
-    Lorem ipsum
-
     XXX
   }
 
-  let(:markdown_output_toc_as_string){
+  let(:markdown_custom_output_as_string){
+    <<~XXX
+    # Example
+
+    !+ [Alpha](#alpha)
+    !  + [Bravo](#bravo)
+    !+ [Delta](#delta)
+    !  + [Echo](#echo)
+
+    ## Alpha
+    ### Bravo
+    #### Charlie
+    ## Delta
+    ### Echo
+    #### Foxtrot
+    XXX
+  }
+
+  let(:markdown_default_output_toc_as_string){
     <<~XXX
     * [Alpha](#alpha)
       * [Bravo](#bravo)
@@ -128,6 +92,15 @@ module Let
     * [Delta](#delta)
       * [Echo](#echo)
         * [Foxtrot](#foxtrot)
+    XXX
+  }
+
+  let(:markdown_custom_output_toc_as_string){
+    <<~XXX
+    !+ [Alpha](#alpha)
+    !  + [Bravo](#bravo)
+    !+ [Delta](#delta)
+    !  + [Echo](#echo)
     XXX
   }
 
@@ -139,12 +112,36 @@ module Let
     Markdown::String.new(markdown_input_toc_as_string)
   }
 
-  let(:markdown_output_as_markdown_string){
-    Markdown::String.new(markdown_output_as_string)
+  let(:markdown_default_output_as_headlines){[
+    Headline.new(level: 2, text: "Alpha"),
+    Headline.new(level: 3, text: "Bravo"),
+    Headline.new(level: 4, text: "Charlie"),
+    Headline.new(level: 2, text: "Delta"),
+    Headline.new(level: 3, text: "Echo"),
+    Headline.new(level: 4, text: "Foxtrot"),
+  ]}
+
+  let(:markdown_custom_output_as_headlines){[
+    Headline.new(level: 2, text: "Alpha"),
+    Headline.new(level: 3, text: "Bravo"),
+    Headline.new(level: 2, text: "Delta"),
+    Headline.new(level: 3, text: "Echo"),
+  ]}
+
+  let(:markdown_default_output_as_markdown_string){
+    Markdown::String.new(markdown_default_output_as_string)
   }
 
-  let(:markdown_output_toc_as_markdown_string){
-    Markdown::String.new(markdown_output_toc_as_string)
+  let(:markdown_default_output_toc_as_markdown_string){
+    Markdown::String.new(markdown_default_output_toc_as_string)
   }
 
+  let(:markdown_custom_output_as_markdown_string){
+    Markdown::String.new(markdown_custom_output_as_string)
+  }
+  let(:markdown_custom_output_toc_as_markdown_string){
+    Markdown::String.new(markdown_custom_output_toc_as_string)
+  }
+
+  
 end

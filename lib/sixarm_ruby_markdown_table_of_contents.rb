@@ -11,3 +11,5 @@ module Markdown; end
 require_relative "sixarm_ruby_markdown_table_of_contents/markdown/headline"
 require_relative "sixarm_ruby_markdown_table_of_contents/markdown/file"
 require_relative "sixarm_ruby_markdown_table_of_contents/markdown/string"
+require_relative "sixarm_ruby_markdown_table_of_contents/markdown/toc/generator"
+require_relative "sixarm_ruby_markdown_table_of_contents/markdown/toc/settings"

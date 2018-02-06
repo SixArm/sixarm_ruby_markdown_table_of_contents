@@ -5,7 +5,9 @@ begin
   if nil == markdown_file_path then raise ArgumentError.new("This command needs an argument that is a markdown file path.") end
   file = Markdown::File.new(markdown_file_path)
   if nil == markdown_file_path then raise ArgumentError.new("This command needs a markdown file path that is a valid file.") end
-  file.rewrite_toc
+  settings = Markdown::TOC::Settings.new
+  generator = Markdown::TOC::Generator.new(settings)
+  file.rewrite_toc(generator)
   exit 0
 rescue
   STDERR.puts "Error! " + $!.message

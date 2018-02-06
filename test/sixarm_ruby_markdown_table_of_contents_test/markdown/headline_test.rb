@@ -9,26 +9,18 @@ describe Headline do
   let(:text){ "Hello World" }
   let(:headline){ Headline.new(level: level, text: text) }
 
-  describe "#text" do
-
-    it "return text" do
-      expect(headline.text).must_equal "Hello World"
-    end
-
-  end
-
   describe "#level" do
 
     it "return level" do
-      expect(headline.text).must_equal "Hello World"
+      expect(headline.level).must_equal level
     end
 
   end
 
-  describe "#indent" do
+  describe "#text" do
 
-    it "return indent, which is two spaces per level greater than H2" do
-      expect(headline.indent).must_equal "  "
+    it "return text" do
+      expect(headline.text).must_equal text
     end
 
   end
@@ -45,14 +37,6 @@ describe Headline do
 
     it "return link, which is the Markdown formatting of the text and anchor" do
       expect(headline.link).must_equal "[Hello World](#hello-world)"
-    end
-
-  end
-
-  describe "#to_markdown" do
-
-    it "return the headline table of contents entry, which is a bullet link, and ending newline" do
-      expect(headline.to_markdown).must_equal "  * [Hello World](#hello-world)\n"
     end
 
   end

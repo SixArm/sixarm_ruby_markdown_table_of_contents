@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 =begin rdoc
-Markdown::File#refresh_toc
 =end
 
 class Markdown::File < ::File
@@ -9,8 +8,8 @@ class Markdown::File < ::File
     Markdown::String.new(read.scrub)
   end
 
-  def rewrite_toc
-    rewrite(slurp.refresh_toc)
+  def rewrite_toc(markdown_toc_generator = Markdown::TOC::Generator.new)
+    rewrite(markdown_toc_generator.rewrite_toc(slurp))
   end
 
 end

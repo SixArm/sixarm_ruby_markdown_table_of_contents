@@ -41,7 +41,7 @@ describe Markdown::File do
       file = Markdown::File.new(file_path)
       file.rewrite_toc
       file = Markdown::File.new(file_path)
-      expect(file.slurp).must_equal(markdown_output_as_markdown_string)      
+      expect(file.slurp).must_equal(markdown_default_output_as_markdown_string)      
       file.close
     end
 

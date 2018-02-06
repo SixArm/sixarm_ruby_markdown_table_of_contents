@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_markdown_table_of_contents"
   s.summary        = "SixArm.com → Ruby → Mardown table of contents"
   s.description    = "Generate a Markdown table of contents via headlines, links, and anchors"
-  s.version        = "2.1.0"
+  s.version        = "2.2.0"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
@@ -25,6 +25,8 @@ Gem::Specification.new do |s|
     "lib/sixarm_ruby_markdown_table_of_contents/markdown/file.rb",
     "lib/sixarm_ruby_markdown_table_of_contents/markdown/headline.rb",
     "lib/sixarm_ruby_markdown_table_of_contents/markdown/string.rb",
+    "lib/sixarm_ruby_markdown_table_of_contents/markdown/toc/generator.rb",
+    "lib/sixarm_ruby_markdown_table_of_contents/markdown/toc/settings.rb",
   ]
 
   s.test_files = [
@@ -32,6 +34,8 @@ Gem::Specification.new do |s|
     "test/sixarm_ruby_markdown_table_of_contents_test/markdown/file_test.rb",
     "test/sixarm_ruby_markdown_table_of_contents_test/markdown/headline_test.rb",
     "test/sixarm_ruby_markdown_table_of_contents_test/markdown/string_test.rb",
+    "test/sixarm_ruby_markdown_table_of_contents_test/markdown/toc/generator_test.rb",
+    "test/sixarm_ruby_markdown_table_of_contents_test/markdown/toc/settings_test.rb",
     "test/support/let.rb",
   ]
 
