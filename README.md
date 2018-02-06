@@ -62,38 +62,43 @@ To require this gem in your code:
 
 ## How it works
 
-The command parses the Markdown file using GitHub's HTML pipeline.
-
-Example Markdown headline:
+The command scans Markdown text for each Markdown headline, such as:
 
     ## Hello World
 
-The pipeline generates a headline anchor href string:
-
-    hello-world
-
-The command creates a markdown list item:
+The command parses the headline to create a Markdown bullet list item link, such as:
 
     * [Hello World](#hello-world)
 
-The command searches the text for the abbreviation "TOC:"
-that starts a line, and is on the line by itself.
+The command processes all the headlines into a Markdown bullet list, such as:
 
-    TOC:
-
-The command replaces successive non-blank lines with the markdown list items:
-
-    TOC:
     * [Hello World](#hello-world)
+    * [Your Headline Here](#your-headline-here)
+    * [Foo Bar](#foo-bar)
+
+The command searches for text that indicates a blank placeholder for a table of contents:
+
+    * [](#)
+
+The command replaces the blank placeholder with the Markdown bullet list.
+
+Later on, you can run the command again, and the command will rescan the headlines, create a fresh Markdown bullet list, and replace the existing Markdown bullet list. 
+
+
+## Technical specifics
+
+The command does a search/replace for first occurence of this regular expression: `^\* \[.*?\]\(#.*?\)$` and continues until the regular expression doesn't match.
+
+ which matches the blank placeholder and also matches an existing Markdown bullet list of links and anchors.
 
 
 ## Demo
 
 Demonstration Markdown file text, before the generator:
 
-    # Demo
+    # My Demo Page
 
-    TOC:
+    * [](#)
       
     ## Alpha
 
@@ -113,9 +118,8 @@ Demonstration Markdown file text, before the generator:
 
 Example Markdown file text, after the generator:
 
-    # Demo
+    # My Demo Page
 
-    TOC:
     * [Alpha](#alpha)
       * [Bravo](#bravo)
     * [Charlie](#charlie)
@@ -176,7 +180,7 @@ such as an SVG anchor image that shows/hides during hover.
 ## Tracking
 
 * Command: markdown-table-of-contents
-* Version: 1.8.0
+* Version: 2.0.0
 * Created: 2018-02-04
 * Updated: 2018-02-06
 * License: Open source as described in the file LICENSE.md

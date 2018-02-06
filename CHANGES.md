@@ -1,5 +1,6 @@
 # Changes
 
+* 2018-02-06 2.0.0 Improve match syntax to handle many more real world cases
 * 2018-02-05 1.7.0 Create as a Ruby gem
 * 2018-02-05 1.6.0 Add H3, H4, H5, H6
 * 2018-02-05 1.5.0 Add licenses

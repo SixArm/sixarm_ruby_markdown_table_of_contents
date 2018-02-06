@@ -9,7 +9,7 @@ module Let
     <<~XXX
     # Example
 
-    Contents:
+    * [](#)
 
     ## Alpha
 
@@ -38,11 +38,54 @@ module Let
     XXX
   }
 
+  let(:markdown_input_pre_match_as_string){ 
+    <<~XXX
+    # Example
+    
+    XXX
+  }
+
+  let(:markdown_input_toc_as_string){ 
+    <<~XXX
+    * [](#)
+    XXX
+  }
+
+  let(:markdown_input_post_match_as_string){ 
+    <<~XXX
+
+    ## Alpha
+
+    Lorem ipsum
+
+    ### Bravo
+
+    Lorem ipsum
+
+    #### Charlie
+
+    Lorem ipsum
+
+    ## Delta
+
+    Lorem ipsum
+
+    ### Echo
+
+    Lorem ipsum
+
+    #### Foxtrot
+
+    Lorem ipsum
+
+    XXX
+  }
+
+
   let(:markdown_output_as_string){
     <<~XXX
     # Example
 
-    Contents:
     * [Alpha](#alpha)
       * [Bravo](#bravo)
         * [Charlie](#charlie)
@@ -90,6 +133,10 @@ module Let
 
   let(:markdown_input_as_markdown_string){
     Markdown::String.new(markdown_input_as_string)
+  }
+
+  let(:markdown_input_toc_as_markdown_string){
+    Markdown::String.new(markdown_input_toc_as_string)
   }
 
   let(:markdown_output_as_markdown_string){
