@@ -30,9 +30,9 @@ Example:
 
 Limits:
 
-  * This does H2 headlines and lesser; this does not do H1 headlines.
+  * This processes H2 headlines and lesser; this deliberately does not process H1 headlines.
 
-  * This needs each headline anchor href to be unique; this does not auto-number them.
+  * This needs each headline anchor href to be unique; this deliberately does not do any disambiguation.
 
 
 
@@ -180,7 +180,7 @@ such as an SVG anchor image that shows/hides during hover.
 ## Tracking
 
 * Command: markdown-table-of-contents
-* Version: 2.0.0
+* Version: 2.1.0
 * Created: 2018-02-04
 * Updated: 2018-02-06
 * License: Open source as described in the file LICENSE.md
