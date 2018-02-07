@@ -1,5 +1,7 @@
 # SixArm.com → Ruby → <br> Markdown table of contents gem
 
+<img src="README.png" alt="Markdown table of contents" style="width: 100%;"/>
+
 <!--header-open-->
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_markdown_table_of_contents.svg)](http://badge.fury.io/rb/sixarm_ruby_markdown_table_of_contents)
