@@ -51,6 +51,4 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = ">= 2.2"
 
-  s.required_ruby_version = ">= 2.2"
-
 end
