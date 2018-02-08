@@ -6,7 +6,7 @@ begin
   file = Markdown::File.new(markdown_file_path)
   if nil == markdown_file_path then raise ArgumentError.new("This command needs a markdown file path that is a valid file.") end
   settings = Markdown::TOC::Settings.new
-  generator = Markdown::TOC::Generator.new(settings)
+  generator = Markdown::TOC::Generator.new(settings: settings)
   file.rewrite_toc(generator)
   exit 0
 rescue

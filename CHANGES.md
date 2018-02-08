@@ -1,5 +1,6 @@
 # Changes
 
+* 2018-02-07 2.2.1 Fix bin settings
 * 2018-02-06 2.2.0 Add settings
 * 2018-02-06 2.1.0 Add bin/markdown-table-of-contents
 * 2018-02-06 2.0.0 Improve match syntax to handle many more real world cases
