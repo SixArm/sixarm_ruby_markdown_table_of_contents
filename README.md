@@ -46,7 +46,7 @@ Limits:
 
 Run this command in your shell or terminal:
 
-gem install sixarm_ruby_markdown_table_of_contents
+    gem install sixarm_ruby_markdown_table_of_contents
 
 Or add this to your Gemfile:
 
@@ -185,6 +185,6 @@ such as an SVG anchor image that shows/hides during hover.
 * Version: 2.1.0
 * Created: 2018-02-04
 * Updated: 2018-02-06
-* License: Open source as described in the file LICENSE.md
+* License: Open source as described in the file [LICENSE.md](LICENSE.md)
 * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 
