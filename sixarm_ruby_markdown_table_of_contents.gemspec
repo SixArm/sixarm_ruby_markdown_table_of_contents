@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_markdown_table_of_contents"
   s.summary        = "SixArm.com → Ruby → Mardown table of contents"
   s.description    = "Generate a Markdown table of contents via headlines, links, and anchors"
-  s.version        = "2.5.0"
+  s.version        = "2.5.1"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
 
   s.executables = ["markdown-table-of-contents"]
 
-  s.add_dependency("sixarm_ruby_markdown", ">= 2.1.0", "< 3")
+  s.add_dependency("sixarm_ruby_markdown", ">= 2.1.3", "< 3")
   s.add_dependency("sixarm_ruby_file_rewrite", ">= 1", "< 2")
 
   s.add_development_dependency("minitest", ">= 5.7.0", "< 6")

@@ -5,11 +5,7 @@ Please see README
 
 require "ostruct"
 require "sixarm_ruby_file_rewrite"
+require "sixarm_ruby_markdown"
 
-module Markdown; end
-
-require_relative "sixarm_ruby_markdown_table_of_contents/markdown/headline"
-require_relative "sixarm_ruby_markdown_table_of_contents/markdown/file"
-require_relative "sixarm_ruby_markdown_table_of_contents/markdown/string"
-require_relative "sixarm_ruby_markdown_table_of_contents/markdown/toc/generator"
-require_relative "sixarm_ruby_markdown_table_of_contents/markdown/toc/settings"
+require_relative "sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/generator"
+require_relative "sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings"

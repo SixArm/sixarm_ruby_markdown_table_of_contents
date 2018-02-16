@@ -2,26 +2,28 @@
 =begin rdoc
 =end
 
-module Markdown; module TOC; class Generator
+module SixArm; module Markdown; module TOC; end; end; end
+
+class SixArm::Markdown::TOC::Generator
 
   attr_accessor :settings
 
   def initialize(
-    settings: Markdown::TOC::Settings.new
+    settings: SixArm::Markdown::TOC::Settings.new
     )
     @settings = settings
   end
 
   def headline_to_markdown(headline)
-    settings.indent + ("  " * (headline.level - 2)) + settings.bullet + " " + headline.link + "\n"
+    settings.line_prefix + ("  " * (headline.level - 2)) + settings.bullet + " " + headline.link + "\n"
   end
 
   def scan_headlines(markdown_string)
     headlines = []
-    markdown_string.scan(settings.headline_regexp).each{|markers, text| 
-      level = markers.length
-      if  level <= settings.depth 
-        headlines << Headline.new(level: level, text: text)
+    markdown_string.scan(settings.headline_regexp).each{|line| 
+      headline = SixArm::Markdown::Headline::parse_line(line.chomp)
+      if  headline.level >= settings.headline_minimum_level && headline.level <= settings.headline_maximum_level 
+        headlines << headline
       end
     }
     return headlines
@@ -36,4 +38,4 @@ module Markdown; module TOC; class Generator
     return m ? m.pre_match + create_toc(markdown_string) + m.post_match : nil
   end
 
-end; end; end
+end

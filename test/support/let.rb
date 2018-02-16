@@ -14,9 +14,7 @@ module Let
     ## Alpha
     ### Bravo
     #### Charlie
-    ## Delta
-    ### Echo
-    #### Foxtrot
+    ##### Delta
     XXX
   }
 
@@ -27,7 +25,7 @@ module Let
     XXX
   }
 
-  let(:markdown_input_toc_as_string){ 
+  let(:markdown_input_toc_match_as_string){ 
     <<~XXX
     * [](#)
     XXX
@@ -39,9 +37,7 @@ module Let
     ## Alpha
     ### Bravo
     #### Charlie
-    ## Delta
-    ### Echo
-    #### Foxtrot
+    ##### Delta
     XXX
   }
 
@@ -53,16 +49,12 @@ module Let
     * [Alpha](#alpha)
       * [Bravo](#bravo)
         * [Charlie](#charlie)
-    * [Delta](#delta)
-      * [Echo](#echo)
-        * [Foxtrot](#foxtrot)
+          * [Delta](#delta)
 
     ## Alpha
     ### Bravo
     #### Charlie
-    ## Delta
-    ### Echo
-    #### Foxtrot
+    ##### Delta
     XXX
   }
 
@@ -70,17 +62,13 @@ module Let
     <<~XXX
     # Example
 
-    !+ [Alpha](#alpha)
     !  + [Bravo](#bravo)
-    !+ [Delta](#delta)
-    !  + [Echo](#echo)
+    !    + [Charlie](#charlie)
 
     ## Alpha
     ### Bravo
     #### Charlie
-    ## Delta
-    ### Echo
-    #### Foxtrot
+    ##### Delta
     XXX
   }
 
@@ -89,59 +77,55 @@ module Let
     * [Alpha](#alpha)
       * [Bravo](#bravo)
         * [Charlie](#charlie)
-    * [Delta](#delta)
-      * [Echo](#echo)
-        * [Foxtrot](#foxtrot)
+          * [Delta](#delta)
     XXX
   }
 
   let(:markdown_custom_output_toc_as_string){
     <<~XXX
-    !+ [Alpha](#alpha)
     !  + [Bravo](#bravo)
-    !+ [Delta](#delta)
-    !  + [Echo](#echo)
+    !    + [Charlie](#charlie)
     XXX
   }
 
   let(:markdown_input_as_markdown_string){
-    Markdown::String.new(markdown_input_as_string)
+    SixArm::Markdown::String.new(markdown_input_as_string)
   }
 
-  let(:markdown_input_toc_as_markdown_string){
-    Markdown::String.new(markdown_input_toc_as_string)
+  let(:markdown_input_toc_match_as_markdown_string){
+    SixArm::Markdown::String.new(markdown_input_toc_match_as_string)
   }
 
   let(:markdown_default_output_as_headlines){[
-    Headline.new(level: 2, text: "Alpha"),
-    Headline.new(level: 3, text: "Bravo"),
-    Headline.new(level: 4, text: "Charlie"),
-    Headline.new(level: 2, text: "Delta"),
-    Headline.new(level: 3, text: "Echo"),
-    Headline.new(level: 4, text: "Foxtrot"),
+    SixArm::Markdown::Headline.new(level: 2, text: "Alpha"),
+    SixArm::Markdown::Headline.new(level: 3, text: "Bravo"),
+    SixArm::Markdown::Headline.new(level: 4, text: "Charlie"),
+    SixArm::Markdown::Headline.new(level: 5, text: "Delta"),
   ]}
 
   let(:markdown_custom_output_as_headlines){[
-    Headline.new(level: 2, text: "Alpha"),
-    Headline.new(level: 3, text: "Bravo"),
-    Headline.new(level: 2, text: "Delta"),
-    Headline.new(level: 3, text: "Echo"),
+    SixArm::Markdown::Headline.new(level: 3, text: "Bravo"),
+    SixArm::Markdown::Headline.new(level: 4, text: "Charlie"),
   ]}
 
   let(:markdown_default_output_as_markdown_string){
-    Markdown::String.new(markdown_default_output_as_string)
+    SixArm::Markdown::String.new(markdown_default_output_as_string)
   }
 
   let(:markdown_default_output_toc_as_markdown_string){
-    Markdown::String.new(markdown_default_output_toc_as_string)
+    SixArm::Markdown::String.new(markdown_default_output_toc_as_string)
   }
 
   let(:markdown_custom_output_as_markdown_string){
-    Markdown::String.new(markdown_custom_output_as_string)
+    SixArm::Markdown::String.new(markdown_custom_output_as_string)
   }
   let(:markdown_custom_output_toc_as_markdown_string){
-    Markdown::String.new(markdown_custom_output_toc_as_string)
+    SixArm::Markdown::String.new(markdown_custom_output_toc_as_string)
   }
 
-  
+  let(:custom_bullet){ "+" }
+  let(:custom_line_prefix){ "!" }
+  let(:custom_headline_minimum_level){ 3 }
+  let(:custom_headline_maximum_level){ 4 }
+
 end

@@ -1,5 +1,9 @@
 # Changes
 
+* 2018-02-15 2.5.1 Fix headlines that end in a newline
+* 2018-02-14 2.5.0 Add headline features for customization
+* 2018-02-11 2.4.0 Add feature to convert multiple files on command line
+* 2018-02-07 2.3.0 Add command line options
 * 2018-02-07 2.2.1 Fix bin settings
 * 2018-02-06 2.2.0 Add settings
 * 2018-02-06 2.1.0 Add bin/markdown-table-of-contents

@@ -24,7 +24,7 @@ based on the markdown headlines.
 
 Syntax:
 
-    markdown-toc-generator <file>
+    markdown-toc-generator [options] <file> ...
 
 Example:
 
@@ -36,6 +36,19 @@ Limits:
 
   * This needs each headline anchor href to be unique; this deliberately does not do any disambiguation.
 
+Options:
+
+  * -b --bullet STRING: set the line bullet (default is "*")
+
+  * -l --line-prefix STRING: set the line prefix (default is "")
+
+  * --min INTEGER: set the headline minimum level (default is 2, meaning H2 and higher; currently 1 does not work, as is a known issue)
+
+  * --max INTEGER: set the headline maximum level (default is 3, meaning H3 and lower)
+
+  * --headline-regex REGEXP: set the headline regular expression
+
+  * --contents-regex REGEXP: set the contents regular expression
 
 
 <!--install-opent-->
@@ -104,19 +117,11 @@ Demonstration Markdown file text, before the generator:
       
     ## Alpha
 
-    Lorem ipsum
-
     ### Bravo
     
-    Lorem ipsum
+    #### Charlie
 
-    ## Charlie
-
-    Lorem ipsum
-
-    ### Delta
-
-    Lorem ipsum
+    #### Delta
 
 Example Markdown file text, after the generator:
 
@@ -124,20 +129,16 @@ Example Markdown file text, after the generator:
 
     * [Alpha](#alpha)
       * [Bravo](#bravo)
-    * [Charlie](#charlie)
-      * [Delta](#delta)
-      
+        * [Charlie](#charlie)
+          * [Delta](#delta)
+
+    ## Alpha
+
     ### Bravo
     
-    Lorem ipsum
+    #### Charlie
 
-    ## Charlie
-
-    Lorem ipsum
-
-    ### Delta
-
-    Lorem ipsum
+    #### Delta
 
 Example of how GitHub renders the file, approximately:
 
@@ -149,31 +150,27 @@ Example of how GitHub renders the file, approximately:
       <li>
         <ul>
           <li><a href="#bravo">Bravo</a></li>
-        </ul>
-      </li>
-      <li><a href="#charlie">Charlie</a></li>
-      <li>
-        <ul>
-          <li><a href="#Delta">Delta</a></li>
+          <li>
+            <ul>
+              <li><a href="#charlie">Charlie</a></li>
+              <li>
+                <ul>
+                  <li><a href="#Delta">Delta</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
  
     <h2><a class="anchor" href="#alpha" id="user-content-alpha">Alpha</a></h2>
 
-    Lorem ipsum
-
     <h3><a class="anchor" href="#bravo" id="user-content-bravo">Bravo</a></h2>
     
-    Lorem ipsum
+    <h4><a class="anchor" href="#charlie" id="user-content-charlie">Charlie</a></h2>
 
-    <h2><a class="anchor" href="#charlie" id="user-content-charlie">Charlie</a></h2>
-
-    Lorem ipsum
-
-    <h3><a class="anchor" href="#delta" id="user-content-delta">Delta</a></h2>
-
-    Lorem ipsum
+    <h5><a class="anchor" href="#delta" id="user-content-delta">Delta</a></h2>
 
 The GitHub automatic rendering typically adds more information, 
 such as an SVG anchor image that shows/hides during hover.
@@ -182,9 +179,9 @@ such as an SVG anchor image that shows/hides during hover.
 ## Tracking
 
 * Command: markdown-table-of-contents
-* Version: 2.1.0
+* Version: 2.4.0
 * Created: 2018-02-04
-* Updated: 2018-02-06
+* Updated: 2018-02-11
 * License: Open source as described in the file LICENSE.md
 * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
 

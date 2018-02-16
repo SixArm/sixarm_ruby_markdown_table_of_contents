@@ -1,13 +1,15 @@
 #!/usr/bin/env ruby
 require "sixarm_ruby_markdown_table_of_contents"
 begin
-  markdown_file_path = ARGV.shift
-  if nil == markdown_file_path then raise ArgumentError.new("This command needs an argument that is a markdown file path.") end
-  file = Markdown::File.new(markdown_file_path)
-  if nil == markdown_file_path then raise ArgumentError.new("This command needs a markdown file path that is a valid file.") end
-  settings = Markdown::TOC::Settings.new
-  generator = Markdown::TOC::Generator.new(settings: settings)
-  file.rewrite_toc(generator)
+  settings = SixArm::Markdown::TOC::Settings.new
+  settings.option_parsing
+  generator = SixArm::Markdown::TOC::Generator.new(settings: settings)
+  ARGV.each{|markdown_file_path| 
+    file = SixArm::Markdown::File.new(markdown_file_path)
+    input = file.slurp
+    output = generator.rewrite_toc(input)
+    file.rewrite(output)
+  }
   exit 0
 rescue
   STDERR.puts "Error! " + $!.message
