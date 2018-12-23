@@ -1,5 +1,7 @@
 # Changes
 
+* 2018-12-23 3.1.0 Add trim of atypical characters
+* 2018-06-22 3.0.0 Update to Ruby 2.5, testing gems, etc.
 * 2018-02-15 2.5.1 Fix headlines that end in a newline
 * 2018-02-14 2.5.0 Add headline features for customization
 * 2018-02-11 2.4.0 Add feature to convert multiple files on command line

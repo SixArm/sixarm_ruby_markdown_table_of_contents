@@ -6,14 +6,13 @@
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_markdown_table_of_contents.svg)](http://badge.fury.io/rb/sixarm_ruby_markdown_table_of_contents)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_markdown_table_of_contents.png)](https://travis-ci.org/SixArm/sixarm_ruby_markdown_table_of_contents)
-[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/d4fbc1f26882a200a1ca/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_markdown_table_of_contents/maintainability)
-[![Coverage Status](https://coveralls.io/repos/SixArm/sixarm_ruby_markdown_table_of_contents/badge.svg?branch=master&service=github)](https://coveralls.io/github/SixArm/sixarm_ruby_markdown_table_of_contents?branch=master)
+[![Code Climate](https://api.codeclimate.com/v1/badges/d4fbc1f26882a200a1ca/maintanability)](https://codeclimate.com/github/SixArm/sixarm_ruby_markdown_table_of_contents/maintainability)
 
-* Git: <https://github.com/sixarm/sixarm_ruby_markdown_table_of_contents>
+* Git: <https://github.com/SixArm/sixarm_ruby_markdown_table_of_contents>
 * Doc: <http://sixarm.com/sixarm_ruby_markdown_table_of_contents/doc>
 * Gem: <https://rubygems.org/gems/sixarm_ruby_markdown_table_of_contents>
 * Contact: Joel Parker Henderson, <joel@sixarm.com>
-* Project: [Changes](CHANGES.md), [License](LICENSE.md), [Contributing](CONTRIBUTING.md).
+* Project: [changes](CHANGES.md), [license](LICENSE.md), [contributing](CONTRIBUTING.md).
 
 <!--header-shut-->
 
@@ -24,11 +23,11 @@ based on the markdown headlines.
 
 Syntax:
 
-    markdown-toc-generator [options] <file> ...
+    markdown-table-of-contents [options] <file> ...
 
 Example:
 
-    markdown-toc-generator example.md
+    markdown-table-of-contents example.md
 
 Limits:
 
@@ -51,23 +50,25 @@ Options:
   * --contents-regex REGEXP: set the contents regular expression
 
 
-<!--install-opent-->
+<!--install-open-->
 
 ## Install
 
 ### Gem
 
-Run this command in your shell or terminal:
+To install this gem in your shell or terminal:
 
     gem install sixarm_ruby_markdown_table_of_contents
 
-Or add this to your Gemfile:
+### Gemfile
+
+To add this gem to your Gemfile:
 
     gem 'sixarm_ruby_markdown_table_of_contents'
 
 ### Require
 
-To require this gem in your code:
+To require the gem in your code:
 
     require 'sixarm_ruby_markdown_table_of_contents'
 
@@ -83,7 +84,23 @@ The command scans Markdown text for each Markdown headline, such as:
 
 The command parses the headline to create a Markdown bullet list item link, such as:
 
-    * [Hello World](#hello-world)
+* [Introduction](#introduction)
+* [Install](#install)
+  * [Gem](#gem)
+  * [Require](#require)
+* [How it works](#how-it-works)
+* [Hello World](#hello-world)
+* [Technical specifics](#technical-specifics)
+* [Demo](#demo)
+* [Alpha](#alpha)
+  * [Bravo](#bravo)
+    * [Charlie](#charlie)
+    * [Delta](#delta)
+* [Alpha](#alpha)
+  * [Bravo](#bravo)
+    * [Charlie](#charlie)
+    * [Delta](#delta)
+* [Tracking](#tracking)
 
 The command processes all the headlines into a Markdown bullet list, such as:
 
@@ -179,9 +196,8 @@ such as an SVG anchor image that shows/hides during hover.
 ## Tracking
 
 * Command: markdown-table-of-contents
-* Version: 2.5.1
+* Version: 3.1.0
 * Created: 2018-02-04
-* Updated: 2018-02-15
+* Updated: 2018-12-23
 * License: Open source as described in the file [LICENSE.md](LICENSE.md)
 * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
-

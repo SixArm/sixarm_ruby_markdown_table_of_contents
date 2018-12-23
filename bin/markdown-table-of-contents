@@ -1,17 +1,36 @@
 #!/usr/bin/env ruby
 require "sixarm_ruby_markdown_table_of_contents"
+
+def vet_file_path(file_path)
+  File.exist?(file_path) or raise ArgumentError.new("File does not exist. File:#{file_path}")
+  File.readable?(file_path) or raise ArgumentError.new("File is not readable. File:#{file_path}")
+  File.writable?(file_path) or raise ArgumentError.new("File is not writeable. File:#{file_path}")
+end
+
+def vet_file_input_markdown(file, md)
+  md != nil or raise IOError.new("Input markdown text is nil. File:#{file.path}")
+end
+
+def vet_file_output_markdown(file, md)
+  md != nil or raise IOError.new("Output markdown text is nil. File:#{file.path}")
+end
+
 begin
   settings = SixArm::Markdown::TOC::Settings.new
   settings.option_parsing
   generator = SixArm::Markdown::TOC::Generator.new(settings: settings)
   ARGV.each{|markdown_file_path| 
+    vet_file_path(markdown_file_path)
     file = SixArm::Markdown::File.new(markdown_file_path)
     input = file.slurp
+    vet_file_input_markdown(file, input)
+    p input
     output = generator.rewrite_toc(input)
+    vet_file_output_markdown(file, output)
     file.rewrite(output)
   }
   exit 0
 rescue
-  STDERR.puts "Error! " + $!.message
+  STDERR.puts "Error!\n\nclass:#{$!.class}\n\nmessage:#{$!.message}\n\n" + $!.backtrace.join("\n")
   exit 1
 end
