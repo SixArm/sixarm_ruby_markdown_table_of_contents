@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: SixArm::Markdown::TOC::Settings
+  
+    &mdash; Documentation by YARD 0.9.16
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "SixArm::Markdown::TOC::Settings";
+  relpath = '../../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../SixArm.html" title="SixArm (module)">SixArm</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Markdown.html" title="SixArm::Markdown (module)">Markdown</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../TOC.html" title="SixArm::Markdown::TOC (module)">TOC</a></span></span>
+     &raquo; 
+    <span class="title">Settings</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: SixArm::Markdown::TOC::Settings
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">SixArm::Markdown::TOC::Settings</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb</dd>
+  </dl>
+  
+</div>
+
+
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="DefaultBullet-constant" class="">DefaultBullet =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>*</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="DefaultLinePrefix-constant" class="">DefaultLinePrefix =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="DefaultHeadlineMinimumLevel-constant" class="">DefaultHeadlineMinimumLevel =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>2</span></pre></dd>
+      
+        <dt id="DefaultHeadlineMaximumLevel-constant" class="">DefaultHeadlineMaximumLevel =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>6</span></pre></dd>
+      
+        <dt id="DefaultHeadlineRegexp-constant" class="">DefaultHeadlineRegexp =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^ *[#=]+ *.+? *[#=]* *\n</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="DefaultContentsRegexp-constant" class="">DefaultContentsRegexp =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(^ *\* \[.*?\]\(#.*?\) *\n)+</span><span class='regexp_end'>/m</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bullet-instance_method" title="#bullet (instance method)">#<strong>bullet</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute bullet.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#contents_regexp-instance_method" title="#contents_regexp (instance method)">#<strong>contents_regexp</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute contents_regexp.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#headline_maximum_level-instance_method" title="#headline_maximum_level (instance method)">#<strong>headline_maximum_level</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute headline_maximum_level.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#headline_minimum_level-instance_method" title="#headline_minimum_level (instance method)">#<strong>headline_minimum_level</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute headline_minimum_level.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#headline_regexp-instance_method" title="#headline_regexp (instance method)">#<strong>headline_regexp</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute headline_regexp.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#line_prefix-instance_method" title="#line_prefix (instance method)">#<strong>line_prefix</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute line_prefix.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(bullet: DefaultBullet, line_prefix: DefaultLinePrefix, headline_minimum_level: DefaultHeadlineMinimumLevel, headline_maximum_level: DefaultHeadlineMaximumLevel, headline_regexp: DefaultHeadlineRegexp, contents_regexp: DefaultContentsRegexp)  &#x21d2; Settings </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Settings.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#option_parsing-instance_method" title="#option_parsing (instance method)">#<strong>option_parsing</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(bullet: DefaultBullet, line_prefix: DefaultLinePrefix, headline_minimum_level: DefaultHeadlineMinimumLevel, headline_maximum_level: DefaultHeadlineMaximumLevel, headline_regexp: DefaultHeadlineRegexp, contents_regexp: DefaultContentsRegexp)  &#x21d2; <tt><span class='object_link'><a href="" title="SixArm::Markdown::TOC::Settings (class)">Settings</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Settings</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span>
+  <span class='label'>bullet:</span> <span class='const'><span class='object_link'><a href="#DefaultBullet-constant" title="SixArm::Markdown::TOC::Settings::DefaultBullet (constant)">DefaultBullet</a></span></span><span class='comma'>,</span> 
+  <span class='label'>line_prefix:</span> <span class='const'><span class='object_link'><a href="#DefaultLinePrefix-constant" title="SixArm::Markdown::TOC::Settings::DefaultLinePrefix (constant)">DefaultLinePrefix</a></span></span><span class='comma'>,</span>
+  <span class='label'>headline_minimum_level:</span> <span class='const'><span class='object_link'><a href="#DefaultHeadlineMinimumLevel-constant" title="SixArm::Markdown::TOC::Settings::DefaultHeadlineMinimumLevel (constant)">DefaultHeadlineMinimumLevel</a></span></span><span class='comma'>,</span> 
+  <span class='label'>headline_maximum_level:</span> <span class='const'><span class='object_link'><a href="#DefaultHeadlineMaximumLevel-constant" title="SixArm::Markdown::TOC::Settings::DefaultHeadlineMaximumLevel (constant)">DefaultHeadlineMaximumLevel</a></span></span><span class='comma'>,</span> 
+  <span class='label'>headline_regexp:</span> <span class='const'><span class='object_link'><a href="#DefaultHeadlineRegexp-constant" title="SixArm::Markdown::TOC::Settings::DefaultHeadlineRegexp (constant)">DefaultHeadlineRegexp</a></span></span><span class='comma'>,</span> 
+  <span class='label'>contents_regexp:</span> <span class='const'><span class='object_link'><a href="#DefaultContentsRegexp-constant" title="SixArm::Markdown::TOC::Settings::DefaultContentsRegexp (constant)">DefaultContentsRegexp</a></span></span>
+  <span class='rparen'>)</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headline_regexp'>headline_regexp</span> <span class='op'>=</span> <span class='id identifier rubyid_headline_regexp'>headline_regexp</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_contents_regexp'>contents_regexp</span> <span class='op'>=</span> <span class='id identifier rubyid_contents_regexp'>contents_regexp</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_bullet'>bullet</span> <span class='op'>=</span> <span class='id identifier rubyid_bullet'>bullet</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headline_minimum_level'>headline_minimum_level</span> <span class='op'>=</span> <span class='id identifier rubyid_headline_minimum_level'>headline_minimum_level</span> 
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headline_maximum_level'>headline_maximum_level</span> <span class='op'>=</span> <span class='id identifier rubyid_headline_maximum_level'>headline_maximum_level</span> 
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_line_prefix'>line_prefix</span> <span class='op'>=</span> <span class='id identifier rubyid_line_prefix'>line_prefix</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="bullet=-instance_method"></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="bullet-instance_method">
+  
+    #<strong>bullet</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute bullet</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bullet'>bullet</span>
+  <span class='ivar'>@bullet</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="contents_regexp=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="contents_regexp-instance_method">
+  
+    #<strong>contents_regexp</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute contents_regexp</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_contents_regexp'>contents_regexp</span>
+  <span class='ivar'>@contents_regexp</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="headline_maximum_level=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="headline_maximum_level-instance_method">
+  
+    #<strong>headline_maximum_level</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute headline_maximum_level</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_headline_maximum_level'>headline_maximum_level</span>
+  <span class='ivar'>@headline_maximum_level</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="headline_minimum_level=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="headline_minimum_level-instance_method">
+  
+    #<strong>headline_minimum_level</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute headline_minimum_level</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_headline_minimum_level'>headline_minimum_level</span>
+  <span class='ivar'>@headline_minimum_level</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="headline_regexp=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="headline_regexp-instance_method">
+  
+    #<strong>headline_regexp</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute headline_regexp</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_headline_regexp'>headline_regexp</span>
+  <span class='ivar'>@headline_regexp</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="line_prefix=-instance_method"></span>
+      <div class="method_details ">
+  <h3 class="signature " id="line_prefix-instance_method">
+  
+    #<strong>line_prefix</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute line_prefix</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_line_prefix'>line_prefix</span>
+  <span class='ivar'>@line_prefix</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="option_parsing-instance_method">
+  
+    #<strong>option_parsing</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/sixarm_ruby_markdown_table_of_contents/sixarm/markdown/toc/settings.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_option_parsing'>option_parsing</span>
+
+  <span class='op'>::</span><span class='const'>OptionParser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_o'>o</span><span class='op'>|</span>  
+      
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_banner'>banner</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Usage: markdown-table-of-contents [options]</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_separator'>separator</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_separator'>separator</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Options:</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-bBULLET</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--bullet BULLET</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> 
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set the bullet text</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(default is \&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DefaultBullet-constant" title="SixArm::Markdown::TOC::Settings::DefaultBullet (constant)">DefaultBullet</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; and other typical choices are \&quot;+\&quot; and \&quot;-\&quot;)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_bullet'>bullet</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-lLINE_PREFIX</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--line-prefix LINE_PREFIX</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>String</span><span class='comma'>,</span> 
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set the line prefiix text</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(default is \&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DefaultLinePrefix-constant" title="SixArm::Markdown::TOC::Settings::DefaultLinePrefix (constant)">DefaultLinePrefix</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; and other typical choices are \&quot;  \&quot; and \&quot;\t\&quot;)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_line_prefix'>line_prefix</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--min NUMBER</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span> 
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set the headline minimum level</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(default is \&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DefaultHeadlineMinimumLevel-constant" title="SixArm::Markdown::TOC::Settings::DefaultHeadlineMinimumLevel (constant)">DefaultHeadlineMinimumLevel</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; which means use H</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DefaultHeadlineMinimumLevel-constant" title="SixArm::Markdown::TOC::Settings::DefaultHeadlineMinimumLevel (constant)">DefaultHeadlineMinimumLevel</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'> and higher)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='comment'>#self.headline_minimum_level = x
+</span>    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--max NUMBER</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>Integer</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set the headline maxmium level</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(default is \&quot;</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DefaultHeadlineMaximumLevel-constant" title="SixArm::Markdown::TOC::Settings::DefaultHeadlineMaximumLevel (constant)">DefaultHeadlineMaximumLevel</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; which means use up to H</span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DefaultHeadlineMaximumLevel-constant" title="SixArm::Markdown::TOC::Settings::DefaultHeadlineMaximumLevel (constant)">DefaultHeadlineMaximumLevel</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headline_maximum_level'>headline_maximum_level</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--headline-regexp REGEXP</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>Regexp</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set the headline regular expression</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(default is </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DefaultHeadlineRegexp-constant" title="SixArm::Markdown::TOC::Settings::DefaultHeadlineRegexp (constant)">DefaultHeadlineRegexp</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_headline_regexp'>headline_regexp</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span>
+    <span class='kw'>end</span>
+    
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on'>on</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--contents-regexp REGEXP</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='const'>Regexp</span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Set the contents regular expression</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+      <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(default is </span><span class='embexpr_beg'>#{</span><span class='const'><span class='object_link'><a href="#DefaultContentsRegexp-constant" title="SixArm::Markdown::TOC::Settings::DefaultContentsRegexp (constant)">DefaultContentsRegexp</a></span></span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+    <span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_x'>x</span><span class='op'>|</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_contents_regexp'>contents_regexp</span> <span class='op'>=</span> <span class='id identifier rubyid_x'>x</span>
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on_tail'>on_tail</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-h</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--help</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Show this message</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='comment'>#puts &quot;Help is TODO&quot;  #TODO
+</span>    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_o'>o</span><span class='period'>.</span><span class='id identifier rubyid_on_tail'>on_tail</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>--version</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Show version</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='comment'>#puts &quot;Version is TODO&quot;  #TODO
+</span>    <span class='kw'>end</span>
+
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_parse!'>parse!</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Sun Dec 23 12:11:40 2018 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.16 (ruby-2.5.1).
+</div>
+
+    </div>
+  </body>
+</html>
