@@ -23,32 +23,29 @@ based on the markdown headlines.
 
 Syntax:
 
-    markdown-table-of-contents [options] <file> ...
+```terminal
+markdown-table-of-contents [options] <file> ...
+```
 
 Example:
 
-    markdown-table-of-contents example.md
+```terminal
+markdown-table-of-contents example.md
+```
 
 Limits:
 
-  * This processes H2 headlines and lesser; this deliberately does not process H1 headlines.
-
-  * This needs each headline anchor href to be unique; this deliberately does not do any disambiguation.
+* This processes H2 headlines and lesser; this deliberately does not process H1 headlines.
+* This needs each headline anchor href to be unique; this deliberately does not do any disambiguation.
 
 Options:
 
-  * -b --bullet STRING: set the line bullet (default is "*")
-
-  * -l --line-prefix STRING: set the line prefix (default is "")
-
-  * --min INTEGER: set the headline minimum level (default is 2, meaning H2 and higher; currently 1 does not work, as is a known issue)
-
-  * --max INTEGER: set the headline maximum level (default is 3, meaning H3 and lower)
-
-  * --headline-regex REGEXP: set the headline regular expression
-
-  * --contents-regex REGEXP: set the contents regular expression
-
+* `-b --bullet STRING`: set the line bullet (default is "`*`")
+* `-l --line-prefix STRING`: set the line prefix (default is "")
+* `--min INTEGER`: set the headline minimum level (default is `2`, meaning H2 and higher; currently `1` does not work, as is a known issue)
+* `--max INTEGER`: set the headline maximum level (default is `3`, meaning H3 and lower)
+* `--headline-regex REGEXP`: set the headline regular expression
+* `--contents-regex REGEXP`: set the contents regular expression
 
 <!--install-open-->
 
@@ -58,29 +55,35 @@ Options:
 
 To install this gem in your shell or terminal:
 
-    gem install sixarm_ruby_markdown_table_of_contents
+```terminal
+gem install sixarm_ruby_markdown_table_of_contents
+```
 
 ### Gemfile
 
 To add this gem to your Gemfile:
 
-    gem 'sixarm_ruby_markdown_table_of_contents'
+```terminal
+gem 'sixarm_ruby_markdown_table_of_contents'
+```
 
 ### Require
 
 To require the gem in your code:
 
-    require 'sixarm_ruby_markdown_table_of_contents'
+```ruby
+require 'sixarm_ruby_markdown_table_of_contents'
+```
 
 <!--install-shut-->
-
-
 
 ## How it works
 
 The command scans Markdown text for each Markdown headline, such as:
 
-    ## Hello World
+```markdown
+## Hello World
+```
 
 The command parses the headline to create a Markdown bullet list item link, such as:
 
@@ -104,18 +107,21 @@ The command parses the headline to create a Markdown bullet list item link, such
 
 The command processes all the headlines into a Markdown bullet list, such as:
 
-    * [Hello World](#hello-world)
-    * [Your Headline Here](#your-headline-here)
-    * [Foo Bar](#foo-bar)
+```markdown
+* [Hello World](#hello-world)
+* [Your Headline Here](#your-headline-here)
+* [Foo Bar](#foo-bar)
+```
 
 The command searches for text that indicates a blank placeholder for a table of contents:
 
-    * [](#)
+```markdown
+* [](#)
+```
 
 The command replaces the blank placeholder with the Markdown bullet list.
 
 Later on, you can run the command again, and the command will rescan the headlines, create a fresh Markdown bullet list, and replace the existing Markdown bullet list. 
-
 
 ## Technical specifics
 
@@ -123,75 +129,79 @@ The command does a search/replace for first occurence of this regular expression
 
  which matches the blank placeholder and also matches an existing Markdown bullet list of links and anchors.
 
-
 ## Demo
 
 Demonstration Markdown file text, before the generator:
 
-    # My Demo Page
+```markdown
+# My Demo Page
 
-    * [](#)
-      
-    ## Alpha
+* [](#)
+  
+## Alpha
 
-    ### Bravo
-    
-    #### Charlie
+### Bravo
 
-    #### Delta
+#### Charlie
+
+#### Delta
+```
 
 Example Markdown file text, after the generator:
 
-    # My Demo Page
+```markdown
+# My Demo Page
 
-    * [Alpha](#alpha)
-      * [Bravo](#bravo)
-        * [Charlie](#charlie)
-          * [Delta](#delta)
+* [Alpha](#alpha)
+  * [Bravo](#bravo)
+    * [Charlie](#charlie)
+      * [Delta](#delta)
 
-    ## Alpha
+## Alpha
 
-    ### Bravo
-    
-    #### Charlie
+### Bravo
 
-    #### Delta
+#### Charlie
+
+#### Delta
+```
 
 Example of how GitHub renders the file, approximately:
 
-    <h1>Demo</h1>
+```html
+<h1>Demo</h1>
 
-    TOC:
+TOC:
+<ul>
+  <li><a href="#alpha">Alpha</a></li>
+  <li>
     <ul>
-      <li><a href="#alpha">Alpha</a></li>
+      <li><a href="#bravo">Bravo</a></li>
       <li>
         <ul>
-          <li><a href="#bravo">Bravo</a></li>
+          <li><a href="#charlie">Charlie</a></li>
           <li>
             <ul>
-              <li><a href="#charlie">Charlie</a></li>
-              <li>
-                <ul>
-                  <li><a href="#Delta">Delta</a></li>
-                </ul>
-              </li>
+              <li><a href="#Delta">Delta</a></li>
             </ul>
           </li>
         </ul>
       </li>
     </ul>
- 
-    <h2><a class="anchor" href="#alpha" id="user-content-alpha">Alpha</a></h2>
+  </li>
+</ul>
 
-    <h3><a class="anchor" href="#bravo" id="user-content-bravo">Bravo</a></h2>
-    
-    <h4><a class="anchor" href="#charlie" id="user-content-charlie">Charlie</a></h2>
+<h2><a class="anchor" href="#alpha" id="user-content-alpha">Alpha</a></h2>
 
-    <h5><a class="anchor" href="#delta" id="user-content-delta">Delta</a></h2>
+<h3><a class="anchor" href="#bravo" id="user-content-bravo">Bravo</a></h2>
 
-The GitHub automatic rendering typically adds more information, 
+<h4><a class="anchor" href="#charlie" id="user-content-charlie">Charlie</a></h2>
+
+<h5><a class="anchor" href="#delta" id="user-content-delta">Delta</a></h2>
+```
+
+The GitHub automatic rendering typically adds more information,
 such as an SVG anchor image that shows/hides during hover.
-
 
 ## Tracking
 
@@ -201,3 +211,5 @@ such as an SVG anchor image that shows/hides during hover.
 * Updated: 2018-12-23
 * License: Open source as described in the file [LICENSE.md](LICENSE.md)
 * Contact: Joel Parker Henderson (joel@joelparkerhenderson.com)
+
+<!-- markdownlint-disable-file MD033 -->
