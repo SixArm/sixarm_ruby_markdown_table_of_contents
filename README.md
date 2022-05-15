@@ -95,6 +95,7 @@ The command parses the headline to create a Markdown bullet list item link, such
 * [How it works](#how-it-works)
 * [Technical specifics](#technical-specifics)
 * [Demo](#demo)
+* [Alternatives](#alternatives)
 * [Tracking](#tracking)
 
 The command processes all the headlines into a Markdown bullet list, such as:
@@ -194,6 +195,12 @@ TOC:
 
 The GitHub automatic rendering typically adds more information,
 such as an SVG anchor image that shows/hides during hover.
+
+## Alternatives
+
+There are other implementations for generating a table of contents in Markdown.
+The VSCode extension [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) supports updating a TOC without requiring any markers.
+One should configure the extension in VSCode to a) not updating the TOC during save and b) including levels 2..6 only.
 
 ## Tracking
 
